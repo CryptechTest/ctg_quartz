@@ -18,7 +18,7 @@ core.register_node("ctg_quartz:quartz_block", {
     tiles = {"quartz_crystal_block.png"},
     groups = {cracky = 2, level = 3, crystal = 1, crystal_block = 1},
     is_ground_content = false,
-    sounds = default.node_sound_metal_defaults(),
+    sounds = default.node_sound_stone_defaults(),
 })
 
 core.register_node("ctg_quartz:cluster_small", {
