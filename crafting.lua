@@ -16,7 +16,7 @@ core.register_craft({
 
 if core.get_modpath("technic") and core.get_modpath("basic_materials") then
     technic.register_alloy_recipe({
-        input = {"ctg_quartz:quartz_shard 3", "basic_materials:silicon"},
+        input = {"ctg_quartz:quartz 2", "basic_materials:silicon"},
         output = "ctg_quartz:crystalline_glass 4",
         time = 27
     })
