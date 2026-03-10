@@ -8,9 +8,9 @@ local all_directions = {
 }
 
 core.register_abm({
-    label = "Amethyst cluster growth",
-    nodenames = "ctg_quartz:amethyst_budding",
-    interval = 240,
+    label = "Quartz cluster growth",
+    nodenames = "ctg_quartz:quartz_budding",
+    interval = 220,
     chance = 1,
     action = function(pos)
         local check_pos = vector.add(all_directions[math.random(1, #all_directions)], pos)

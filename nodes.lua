@@ -1,5 +1,5 @@
 core.register_node("ctg_quartz:quartz", {
-    description = "Quartz Crystal",
+    description = "Quartz Block",
     tiles = {"quartz_crystal.png"},
     groups = {cracky = 3, level = 3},
     sounds = default.node_sound_glass_defaults(),
@@ -88,7 +88,7 @@ core.register_node("ctg_quartz:cluster_large", {
 })
 
 core.register_node("ctg_quartz:crystalline_glass", {
-    description = "Quartz Crystal Glass",
+    description = "Quartz Crystalline Glass",
     drawtype = "glasslike_framed_optional",
     tiles = {{name = "quartz_glass.png", backface_culling = false}, {name = "quartz_glass_detail.png", backface_culling = false}},
     use_texture_alpha = "blend",
