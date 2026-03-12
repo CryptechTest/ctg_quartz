@@ -1,14 +1,14 @@
 core.register_node("ctg_quartz:quartz", {
     description = "Quartz Block",
     tiles = {"quartz_crystal.png"},
-    groups = {cracky = 3, level = 3},
+    groups = {cracky = 3, level = 3, gemstone = 1},
     sounds = default.node_sound_glass_defaults(),
 })
 
 core.register_node("ctg_quartz:quartz_budding", {
     description = "Budding Quartz Block",
     tiles = {"quartz_crystal.png^[combine:16x80:0,-48=crack_anylength.png"},
-    groups = {cracky = 3, level = 2},
+    groups = {cracky = 3, level = 2, gemstone = 2},
     drop = "ctg_quartz:quartz",
     sounds = default.node_sound_glass_defaults(),
 })
@@ -16,9 +16,16 @@ core.register_node("ctg_quartz:quartz_budding", {
 core.register_node("ctg_quartz:quartz_block", {
     description = "Crystalline Quartz Block",
     tiles = {"quartz_crystal_block.png"},
-    groups = {cracky = 2, level = 3, crystal = 1, crystal_block = 1},
+    groups = {cracky = 2, level = 3, crystal_block = 1, gemstone = 1},
     is_ground_content = false,
     sounds = default.node_sound_stone_defaults(),
+})
+
+core.register_node("ctg_quartz:quartz_brick", {
+    description = "Quartz Crystal Brick",
+    tiles = {"quartz_crystal_brick.png"},
+    groups = {cracky = 3, level = 2, gemstone = 1},
+    sounds = default.node_sound_glass_defaults(),
 })
 
 core.register_node("ctg_quartz:cluster_small", {
@@ -34,7 +41,7 @@ core.register_node("ctg_quartz:cluster_small", {
         type = "fixed",
         fixed = {-4/16, -7/16, -4/16, 4/16, -3/16, 4/16},
     },
-    groups = {cracky = 3, not_in_creative_inventory = 1},
+    groups = {cracky = 3, not_in_creative_inventory = 1, gemstone = 1},
     drop = {
         max_items = 1,
         items = {
@@ -58,7 +65,7 @@ core.register_node("ctg_quartz:cluster_medium", {
         type = "fixed",
         fixed = {-5/16, -8/16, -5/16, 5/16, -2/16, 5/16},
     },
-    groups = {cracky = 3, not_in_creative_inventory = 1},
+    groups = {cracky = 3, not_in_creative_inventory = 1, gemstone = 1},
     drop = {
         max_items = 1,
         items = {
@@ -82,7 +89,7 @@ core.register_node("ctg_quartz:cluster_large", {
         type = "fixed",
         fixed = {-5/16, -8/16, -5/16, 5/16, 4/16, 5/16},
     },
-    groups = {cracky = 3},
+    groups = {cracky = 3, gemstone = 1},
     drop = "ctg_quartz:quartz_shard",
     sounds = default.node_sound_glass_defaults(),
 })
@@ -95,7 +102,7 @@ core.register_node("ctg_quartz:crystalline_glass", {
     paramtype = "light",
     sunlight_propagates = true,
     is_ground_content = false,
-    groups = {cracky = 2, level = 3},
+    groups = {cracky = 2, level = 3, gemstone = 1},
     sounds = default.node_sound_glass_defaults(),
 })
 
@@ -110,7 +117,7 @@ end
 
 if core.get_modpath("stairs") then
     stairs.register_stair_and_slab("quartz_block", "ctg_quartz:quartz_block",
-    {cracky = 2, level = 2},
+    {cracky = 2, level = 2, gemstone = 1},
     {"quartz_crystal_block.png"},
     "Crystalline Quartz Stair",
     "Crystalline Quartz Slab",

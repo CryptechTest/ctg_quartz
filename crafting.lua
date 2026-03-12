@@ -30,3 +30,12 @@ core.register_craft({
         {"ctg_quartz:quartz", "ctg_quartz:quartz_shard", "ctg_quartz:quartz"},
     },
 })
+
+core.register_craft({
+    output = "ctg_quartz:quartz_brick 4",
+    recipe = {
+        {"", "ctg_quartz:quartz_block", "ctg_quartz:quartz_block"},
+        {"", "ctg_quartz:quartz_block", "ctg_quartz:quartz_block"},
+        {"", "", ""},
+    },
+})
