@@ -4,6 +4,23 @@ dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
+if core.get_modpath("deepslate") then
+    geodes_lib:register_geode({
+        id = 'quartz_deepslate',
+        wherein = "deepslate:deepslate",
+        y_min = -10000,
+        y_max = -6000,
+        scarcity = 72,
+        generation_chance = 100,
+        inner = "ctg_quartz:quartz",
+        inner_alt = "ctg_quartz:quartz_budding",
+        inner_alt_chance = 70,
+        shell = {"deepslate:deepslate", "amethyst_new:basalt", "amethyst_new:calcite"},
+        cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+        radius_min = 3,
+        radius_max = 11,
+    })
+end
 
 geodes_lib:register_geode({
     id = 'quartz_marble',
