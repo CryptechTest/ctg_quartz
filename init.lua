@@ -4,7 +4,134 @@ dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
+
 geodes_lib:register_geode({
+    id = 'quartz_marble',
+    wherein = "technic:marble",
+    y_min = -10000,
+    y_max = -1000,
+    scarcity = 72,
+    generation_chance = 100,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 80,
+    shell = {"technic:marble", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 3,
+    radius_max = 10,
+})
+geodes_lib:register_geode({
+    id = 'quartz_granite',
+    wherein = "technic:granite",
+    y_min = -10000,
+    y_max = -1000,
+    scarcity = 72,
+    generation_chance = 100,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 80,
+    shell = {"technic:granite", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 3,
+    radius_max = 10,
+})
+
+---
+geodes_lib:register_geode({
+    id = 'quartz_stone_deep',
+    wherein = "default:sand",
+    y_min = -1000,
+    y_max = -128,
+    scarcity = 72,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 80,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 3,
+    radius_max = 10,
+})
+geodes_lib:register_geode({
+    id = 'quartz_stone_deep',
+    wherein = "default:sandstone",
+    y_min = -1000,
+    y_max = -128,
+    scarcity = 72,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 80,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 3,
+    radius_max = 10,
+})
+geodes_lib:register_geode({
+    id = 'quartz_stone_deep',
+    wherein = "default:stone",
+    y_min = -1000,
+    y_max = -128,
+    scarcity = 72,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 80,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 3,
+    radius_max = 10,
+})
+
+---
+geodes_lib:register_geode({
+    id = 'quartz_stone_shallow',
+    wherein = "default:sand",
+    y_min = -128,
+    y_max = 128,
+    scarcity = 80,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 100,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 1,
+    radius_max = 3,
+})
+geodes_lib:register_geode({
+    id = 'quartz_stone_shallow',
+    wherein = "default:sandstone",
+    y_min = -128,
+    y_max = 128,
+    scarcity = 88,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 100,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 1,
+    radius_max = 3,
+})
+geodes_lib:register_geode({
+    id = 'quartz_stone_shallow',
+    wherein = "default:stone",
+    y_min = -128,
+    y_max = 128,
+    scarcity = 91,
+    generation_chance = 50,
+    inner = "ctg_quartz:quartz",
+    inner_alt = "ctg_quartz:quartz_budding",
+    inner_alt_chance = 100,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 15, span = 10 },
+    radius_min = 1,
+    radius_max = 3,
+})
+
+
+--[[geodes_lib:register_geode({
     id = 'quartz_1',
     wherein = "default:stone",
     y_min = -3000,
@@ -51,8 +178,9 @@ geodes_lib:register_geode({
     cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 20, span = 20 },
     radius_min = 3,
     radius_max = 11,
-})
+})]]
 
+--[[
 geodes_lib:register_geode({
     id = 'quartz_water',
     wherein = "default:stone",
@@ -67,4 +195,4 @@ geodes_lib:register_geode({
     cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 37, span = 35 },
     radius_min = 3,
     radius_max = 11,
-})
+})]]
