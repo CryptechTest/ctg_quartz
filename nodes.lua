@@ -9,7 +9,21 @@ core.register_node("ctg_quartz:quartz_budding", {
     description = "Budding Quartz Block",
     tiles = {"quartz_crystal.png^[combine:16x80:0,-48=crack_anylength.png"},
     groups = {cracky = 3, level = 2, gemstone = 2},
-    drop = "ctg_quartz:quartz",
+    drop = {
+        max_items = 1,
+        items = {
+            {
+                -- player will get budding with 1/50 chance
+                items = {'ctg_quartz:quartz_budding'},
+                rarity = 10,
+            },
+            {
+                -- player will get regular node only if he get no budding,
+                -- this is because max_items is 1
+                items = {'ctg_quartz:quartz'},
+            }
+        }
+    },    
     sounds = default.node_sound_glass_defaults(),
 })
 
@@ -67,10 +81,15 @@ core.register_node("ctg_quartz:cluster_medium", {
     },
     groups = {cracky = 3, not_in_creative_inventory = 1, gemstone = 1},
     drop = {
-        max_items = 1,
+        max_items = 2,
         items = {
-            items = {"ctg_quartz:quartz_shard"},
-            rarity = 3,
+            {
+                items = {"ctg_quartz:quartz_shard"},
+                rarity = 3,
+            },
+            {
+                items = {"ctg_quartz:quartz_shard"},
+            }
         }
     },
     sounds = default.node_sound_glass_defaults(),
@@ -90,7 +109,18 @@ core.register_node("ctg_quartz:cluster_large", {
         fixed = {-5/16, -8/16, -5/16, 5/16, 4/16, 5/16},
     },
     groups = {cracky = 3, gemstone = 1},
-    drop = "ctg_quartz:quartz_shard",
+    drop = {
+        max_items = 3,
+        items = {
+            {
+                items = {"ctg_quartz:quartz_shard"},
+                rarity = 3,
+            },
+            {
+                items = {"ctg_quartz:quartz_shard 2"},
+            }
+        }
+    },
     sounds = default.node_sound_glass_defaults(),
 })
 
